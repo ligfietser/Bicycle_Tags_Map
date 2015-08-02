@@ -1,0 +1,139 @@
+	html, body{
+		position:absolute;
+		width: 100%;
+		height: 100%;
+		margin: 0;
+	}
+	iframe.hidden
+	{
+	display:none
+	}
+	div.olControlLocalTracks {
+		left: 15px;
+		bottom: 60px;
+	}
+		div.olControlLayerSwitcher .layersDiv {
+		background-color:  #888888 ;
+		padding-left: 0px;
+		font-size: 11px;
+		}
+	div.olControlAttribution {
+		position: absolute;
+		padding-left: 10px;
+		font-family: Verdana;
+		font-size: 0.75em;
+		font-weight:bold;
+		width: 250px;
+		bottom: 10px;
+		left: 10px;
+		background-color:rgba(200,200,200,0.6);
+	}
+	div.olControlPermaLink {
+		font-family: Verdana;
+		font-size: 1.0em;
+		font-weight:bold;
+		bottom: 10px;	
+		right: 10px;
+		background-color:rgba(200,200,200,0.6);
+		padding: 5px;
+	}  
+	div.olControlScaleLine {
+		font-family: Verdana;
+		font-size: 0.7em;
+		bottom: 40px;
+		left: 10px;
+	}
+	.titel {
+		position: absolute;
+		font-family: Verdana;
+		font-size: 10pt;
+		font-weight:bold;
+		background-color: white;
+		background-color:rgba(255,255,255,1);
+		top: 20px;
+		left: 80px;
+		width: 350px;
+		border-style: solid;
+		border-width: 2px;
+		border-color: black;
+	}
+	.zoom{
+		position: absolute;
+		font-family: Verdana;
+		font-size: 8pt;
+		font-weight:bold;
+		background-color:#FFFFFF;
+		top: 320px;
+		left: 17px;
+		border-style: solid;
+		border-width: 1px;
+		border-color: black;
+	}
+	.kaartnaam {
+		font-family: Verdana;
+		font-size: 10pt;
+		font-weight:bold;
+		
+	}
+	.choice{
+		font-family: Verdana;
+		font-size: 8pt;
+		font-weight:bold;
+		background-color: yellow;
+		cursor: default;
+	}
+	.dorment{
+		font-family: Verdana;
+		font-size: 8pt;
+		font-weight:bold;
+		background-color: white;
+		cursor: default;
+	}
+	.action{
+        font-family: Verdana;
+        font-size: 8pt;
+        font-weight:bold;
+        background-color: #CCCCFF;
+        cursor: default;
+        }
+	div.statusline {
+		position: absolute;
+		font-family: Verdana;
+		font-size: 8pt;
+		font-weight:bold;
+		color: white;
+		background-color:#FF0000;
+		top: 120px;
+		left: 80px;
+		border-style: none;
+		border-width: 2px;
+		border-color: black;
+		visibility: hidden;
+	}
+		
+	div.info {
+		position: absolute;
+		font-family: Verdana;
+		font-size: 1.0em;
+		font-weight:bold;
+		background-color:#eeeeee;
+		width: 900px;
+		top: 180px;
+		border-style: solid;
+		border-width: 2px;
+		border-color: black;
+		cursor: default;
+	}
+	.olPopupContent{
+	font-family: Verdana;
+	border-color: #888888;
+	border-width: 0px;
+	border-style: none;
+	background-color:#FFFFFF;
+	margin:0px 0px 0px 0px;
+	padding:0px 0px 0px 0px;
+	}
+	
+	div.olMapViewport {
+		z-index: 0;
+		}
