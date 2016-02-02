@@ -43,7 +43,7 @@
 				var oURL = this.genericUrl + "&bbox=" + (lonlat.lon - rel_tolerance) + "," + (lonlat.lat - rel_tolerance) + "," + (lonlat.lon + rel_tolerance) + "," + (lonlat.lat + rel_tolerance);
 				//alert(oURL);
 				oRequest.open("GET", oURL, false);
-				oRequest.setRequestHeader("User-Agent", navigator.userAgent);
+				// oRequest.setRequestHeader("User-Agent", navigator.userAgent);
 				oRequest.send(null);
 
 				if (oRequest.status == 200) {
