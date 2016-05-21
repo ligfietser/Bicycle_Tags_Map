@@ -109,6 +109,12 @@ function init(){
 		
 		var arcgis = new OpenLayers.Layer.XYZ("ArcGIS World Topo","http://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/${z}/${y}/${x}",{'attribution': 'Cartography © <a href="http://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer" target="_blank">ArcGIS</a><br>Overlay data OpenStreetMap contributors, licensed under ODbL '}); 
 		map.addLayer(arcgis);
+		
+		var positron = new OpenLayers.Layer.XYZ("Positron (CartoDB)","http://{1-4}.basemaps.cartocdn.com/light_all/${z}/${x}/${y}.png",{'attribution': '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="https://cartodb.com/attributions">CartoDB</a>'}); 
+		map.addLayer(positron);
+
+		var darkmatter = new OpenLayers.Layer.XYZ("Dark Matter (CartoDB)","http://{1-4}.basemaps.cartocdn.com/dark_all/${z}/${x}/${y}.png",{'attribution': '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="https://cartodb.com/attributions">CartoDB</a>'}); 
+		map.addLayer(darkmatter);
 
 		googlesat = new OpenLayers.Layer.Google("Google Sat",{type: google.maps.MapTypeId.SATELLITE, numZoomLevels: 19});
 		map.addLayer(googlesat);
