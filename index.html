@@ -103,10 +103,7 @@ function init(){
 		
 		layerCycleMap = new OpenLayers.Layer.OSM.CycleMap("CycleMap");
 		map.addLayer(layerCycleMap);
-		
-		var mapquest = new OpenLayers.Layer.OSM("MapQuest","http://otile1.mqcdn.com/tiles/1.0.0/osm/${z}/${x}/${y}.png",{'attribution': '© <a href="http://www.openstreetmap.org/copyright/en" target="_blank">OpenStreetMap</a> contributors<br>Cartography © MapQuest<br>Overlay data licensed under ODbL '}); 
-		map.addLayer(mapquest);
-		
+
 		var arcgis = new OpenLayers.Layer.XYZ("ArcGIS World Topo","http://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/${z}/${y}/${x}",{'attribution': 'Cartography © <a href="http://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer" target="_blank">ArcGIS</a><br>Overlay data OpenStreetMap contributors, licensed under ODbL '}); 
 		map.addLayer(arcgis);
 
