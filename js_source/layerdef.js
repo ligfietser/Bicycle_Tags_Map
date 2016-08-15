@@ -20,7 +20,7 @@
 			make_layer(QURL + "?data=(way[highway=cycleway](bbox);node(w);way[highway~'path$|^footway$'][bicycle=designated](bbox);node(w););out+skel;", "red",name="#l#highway=cycleway", 3, false,"@1.0"),
 			  
 			//Bromfiets/Fietpaden/Onverpl.fietspaden
-            make_layer(QURL + "?data=(way[highway=cycleway][moped~'^designated$|^yes$'](bbox);node(w););out+skel;", "#7b006a",name="#l#cycleway, moped=yes", 4, false),
+            make_layer(QURL + "?data=(way[highway=cycleway][moped~'^designated$|^yes$'](bbox);node(w);way[highway=cycleway]['moped:forward'~'^designated$|^yes$'](bbox);node(w);way[highway=cycleway]['moped:backward'~'^designated$|^yes$'](bbox);node(w););out+skel;", "#7b006a",name="#l#cycleway, moped=yes", 4, false),
 			  
             make_layer(QURL + "?data=(way[highway=cycleway][moped=no](bbox);node(w););out+skel;", "#00FFFF",name="#dl#cycleway moped=no", 3, false,"6 10"),
 			
