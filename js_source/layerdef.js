@@ -168,7 +168,7 @@
                                        "https://www.routedatabank.nl/geoserver/wms",
                                        {layers: "routedatabank:lf_routes",
 										transparent: true,
-										format: "image/png"
+										format: "image/gif"
 										},{
 										visibility: false
 										});
@@ -178,7 +178,7 @@
                                        "https://www.routedatabank.nl/geoserver/wms",
                                        {layers: "routedatabank:fietsnetwerken_vrij",
 										transparent: true,
-										format: "image/png"
+										format: "image/gif"
 										},{
 										visibility: false
 										});
@@ -188,7 +188,7 @@
                                        "https://www.routedatabank.nl/geoserver/wms",
                                        {layers: "routedatabank:fietsknooppunten_vrij",
 										transparent: true,
-										format: "image/png"
+										format: "image/gif"
 										},{
 										visibility: false
 										});
