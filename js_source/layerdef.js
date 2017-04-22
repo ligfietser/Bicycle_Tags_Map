@@ -174,7 +174,7 @@
 										});
 			map.addLayer(LFRoutes);		
 			
-			var fietsnetwerk = new OpenLayers.Layer.WMS("<img style='vertical-align: middle;background-color: #39ff00;' src='img/line.gif'>&nbspOfficial cycle node network (routedatabank.nl)",
+			var fietsnetwerk1 = new OpenLayers.Layer.WMS("<img style='vertical-align: middle;background-color: green;' src='img/line.gif'>&nbspOfficial cycle node network (routedatabank.nl)",
                                        "https://www.routedatabank.nl/geoserver/wms",
                                        {layers: "routedatabank:fietsnetwerken_vrij",
 										transparent: true,
@@ -182,11 +182,31 @@
 										},{
 										visibility: false
 										});
-			map.addLayer(fietsnetwerk);	
+			map.addLayer(fietsnetwerk1);	
 			
-			var fietsknoop = new OpenLayers.Layer.WMS("<img style='vertical-align: middle;background-color: white;' src='img/tocircle.gif'>&nbspOfficial cycle nodes (routedatabank.nl)",
+			var fietsknoop1 = new OpenLayers.Layer.WMS("<img style='vertical-align: middle;background-color: white;' src='img/tocircle.gif'>&nbspOfficial cycle nodes (routedatabank.nl)",
                                        "https://www.routedatabank.nl/geoserver/wms",
                                        {layers: "routedatabank:fietsknooppunten_vrij",
+										transparent: true,
+										format: "image/gif"
+										},{
+										visibility: false
+										});
+			map.addLayer(fietsknoop1);
+			
+			var fietsnetwerk = new OpenLayers.Layer.WMS("<img style='vertical-align: middle;background-color: #39ff00;' src='img/line.gif'>&nbspOfficial cycle node network (pdok.nl)",
+                                       "http://geodata.nationaalgeoregister.nl/fietsknooppuntennetwerk/wms",
+                                       {layers: "netwerken",
+										transparent: true,
+										format: "image/gif"
+										},{
+										visibility: false
+										});
+			map.addLayer(fietsnetwerk);	
+			
+			var fietsknoop = new OpenLayers.Layer.WMS("<img style='vertical-align: middle;background-color: white;' src='img/tocircle.gif'>&nbspOfficial cycle nodes (pdok.nl)",
+                                       "http://geodata.nationaalgeoregister.nl/fietsknooppuntennetwerk/wms",
+                                       {layers: "knooppunten",
 										transparent: true,
 										format: "image/gif"
 										},{
