@@ -113,8 +113,15 @@ function init(){
 		var darkmatter = new OpenLayers.Layer.XYZ("Dark Matter (CartoDB)","http://s.basemaps.cartocdn.com/dark_all/${z}/${x}/${y}.png",{'attribution': '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="https://cartodb.com/attributions">CartoDB</a>'});
 		map.addLayer(darkmatter);
 		
-		googlesat = new OpenLayers.Layer.Google("Google Sat",{type: google.maps.MapTypeId.SATELLITE, numZoomLevels: 19});
-		map.addLayer(googlesat);
+		googlesat = new OpenLayers.Layer.XYZ("Google Sat",
+                    ["https://mt0.google.com/vt/lyrs=s&x=${x}&y=${y}&z=${z}",
+					"https://mt1.google.com/vt/lyrs=s&x=${x}&y=${y}&z=${z}",
+					"https://mt2.google.com/vt/lyrs=s&x=${x}&y=${y}&z=${z}",
+					"https://mt3.google.com/vt/lyrs=s&x=${x}&y=${y}&z=${z}"
+					],
+                    { numZoomLevels: 19,
+                    attribution: '<a href="https://maps.google.com"><b>Source: Google Maps</b> </a>'});
+					map.addLayer(googlesat);
 		
 		
 		// ====
