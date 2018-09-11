@@ -101,8 +101,7 @@ function init(){
 		var BW = new OpenLayers.Layer.XYZ("Mapnik (B&W)","http://toolserver.org/tiles/bw-mapnik/${z}/${x}/${y}.png",{'attribution': '© <a href="http://www.openstreetmap.org/copyright/en" target="_blank">OpenStreetMap</a> contributors<br>Overlay data licensed under ODbL '}); 
 		map.addLayer(BW);
 		
-		layerCycleMap = new OpenLayers.Layer.OSM.CycleMap("CycleMap");
-		map.addLayer(layerCycleMap);
+		var cycle = new OpenLayers.Layer.OSM("OpenCycleMap", ["https://a.tile.thunderforest.com/cycle/${z}/${x}/${y}.png?apikey=a5dd6a2f1c934394bce6b0fb077203eb", "https://b.tile.thunderforest.com/cycle/${z}/${x}/${y}.png?apikey=a5dd6a2f1c934394bce6b0fb077203eb", "https://c.tile.thunderforest.com/cycle/${z}/${x}/${y}.png?apikey=a5dd6a2f1c934394bce6b0fb077203eb"], { displayOutsideMaxExtent: true,numZoomLevels: 19, attribution: 'Open Cyclemap '}); map.addLayer(cycle);
 
 		var arcgis = new OpenLayers.Layer.XYZ("ArcGIS World Topo","http://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/${z}/${y}/${x}",{'attribution': 'Cartography © <a href="http://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer" target="_blank">ArcGIS</a><br>Overlay data OpenStreetMap contributors, licensed under ODbL '}); 
 		map.addLayer(arcgis);
