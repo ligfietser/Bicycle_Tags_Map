@@ -64,7 +64,7 @@
 					// zoek naar nummers met meer dan 5 cijfers ( de ref's )
 					// functie die weg id's vervangt door een link naar osm
 					function addlink(match) {
-						s = "<a href=\"http://www.openstreetmap.org/browse/" + match.match(/node|way|relation/i) + "\/" + match.match(/[0-9]{2,}/) + "\" target=\"_blank\">" + match + "</a>";
+						s = "<a href=\"https://www.openstreetmap.org/browse/" + match.match(/node|way|relation/i) + "\/" + match.match(/[0-9]{2,}/) + "\" target=\"_blank\">" + match + "</a>";
 						return s.toLowerCase();
 					}
 					var zoek = /Way [0-9]{5,}/g;

@@ -2,7 +2,7 @@
 ini_set('display_errors',1); 
 error_reporting(E_ALL);
 // basis url
-$overpass_url = "http://overpass-api.de/api/interpreter?data=";
+$overpass_url = "https://overpass-api.de/api/interpreter?data=";
 
 $data = $_GET["data"]; // de string met de query
 $bbox = $_GET["bbox"]; // is de bounding box die (bbox) in bovenstaande string  vervangt
