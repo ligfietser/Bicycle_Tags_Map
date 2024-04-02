@@ -6,9 +6,8 @@ Here you can find the source code of the [BTM (bicycle tags map)](http://mijndev
 The main URL for the Bicycle Tags Map is http://mijndev.openstreetmap.nl/~ligfietser/fiets/
 
 ## Wiki
-http://wiki.openstreetmap.org/wiki/Bicycle_tags_map
+https://wiki.openstreetmap.org/wiki/Bicycle_tags_map
 
 ## Forum
 For questions, suggestions etc use this topic on the Dutch OSM forum:
-http://forum.openstreetmap.org/viewtopic.php?id=18951
-
+https://community.openstreetmap.org/t/webkaartje-met-fietstags/61689
