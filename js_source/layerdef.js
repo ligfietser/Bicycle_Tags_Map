@@ -226,58 +226,40 @@
 			]);
 	
 			// Officiële LF routes van het Fietsplatform
-			var LFRoutes = new OpenLayers.Layer.WMS("<img style='vertical-align: middle;background-color: green;' src='img/line.gif'>&nbspOfficial LF routes (routedatabank.nl)",
-
-                                       "https://www.routedatabank.nl/geoserver/wms",
-                                       {layers: "routedatabank:lf_routes",
+			var LFRoutes = new OpenLayers.Layer.WMS("<img style='vertical-align: middle;background-color: green;' src='img/line.gif'>&nbspDutch LF routes (pdok.nl)",
+                                       "https://service.pdok.nl/fietsplatform/landelijke-fietsroutes/wms/v1_0",
+                                       {layers: "landelijke-fietsroutes",
 										transparent: true,
-										format: "image/gif"
+										format: "image/png"
 										},{
+										tileOptions: {crossOriginKeyword: 'anonymous'},
 										visibility: false
 										});
 			map.addLayer(LFRoutes);		
-			
-			var fietsnetwerk1 = new OpenLayers.Layer.WMS("<img style='vertical-align: middle;background-color: green;' src='img/line.gif'>&nbspOfficial cycle node network (routedatabank.nl)",
-                                       "https://www.routedatabank.nl/geoserver/wms",
-                                       {layers: "routedatabank:fietsnetwerken_vrij",
+		
+			var fietsnetwerk = new OpenLayers.Layer.WMS("<img style='vertical-align: middle;background-color: #39ff00;' src='img/line.gif'>&nbspDutch cycle node network (pdok.nl)",
+                                       "https://service.pdok.nl/fietsplatform/regionale-fietsnetwerken/wms/v1_0",
+                                       {layers: "fietsnetwerken",
 										transparent: true,
-										format: "image/gif"
-										},{
-										visibility: false
-										});
-			map.addLayer(fietsnetwerk1);	
-			
-			var fietsknoop1 = new OpenLayers.Layer.WMS("<img style='vertical-align: middle;background-color: white;' src='img/tocircle.gif'>&nbspOfficial cycle nodes (routedatabank.nl)",
-                                       "https://www.routedatabank.nl/geoserver/wms",
-                                       {layers: "routedatabank:fietsknooppunten_vrij",
-										transparent: true,
-										format: "image/gif"
-										},{
-										visibility: false
-										});
-			map.addLayer(fietsknoop1);
-			
-			var fietsnetwerk = new OpenLayers.Layer.WMS("<img style='vertical-align: middle;background-color: #39ff00;' src='img/line.gif'>&nbspOfficial cycle node network (pdok.nl)",
-                                       "http://geodata.nationaalgeoregister.nl/fietsknooppuntennetwerk/wms",
-                                       {layers: "netwerken",
-										transparent: true,
-										format: "image/gif"
+										format: "image/png",
+										styles: "fietsnetwerken"
 										},{
 										visibility: false
 										});
 			map.addLayer(fietsnetwerk);	
 			
-			var fietsknoop = new OpenLayers.Layer.WMS("<img style='vertical-align: middle;background-color: white;' src='img/tocircle.gif'>&nbspOfficial cycle nodes (pdok.nl)",
-                                       "http://geodata.nationaalgeoregister.nl/fietsknooppuntennetwerk/wms",
-                                       {layers: "knooppunten",
+			var fietsknoop = new OpenLayers.Layer.WMS("<img style='vertical-align: middle;background-color: white;' src='img/tocircle.gif'>&nbspDutch cycle nodes (pdok.nl)",
+                                       "https://service.pdok.nl/fietsplatform/regionale-fietsnetwerken/wms/v1_0",
+                                       {layers: "fietsknooppunten",
 										transparent: true,
-										format: "image/gif"
+										format: "image/png",
+										styles: "fietsknooppunten"
 										},{
 										visibility: false
 										});
 			map.addLayer(fietsknoop);
 	
-	}	
+	}
 
 	if (type == "bugs"){
 		//	dit maakt de layers voor de bugslaag

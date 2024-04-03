@@ -40,7 +40,7 @@ var browser = "";
 		}
 		if (proxy){
 		// zet dit terug naar je eigen proxy
-		var QURL = "http://mijndev.openstreetmap.nl/~ligfietser/fiets/api/interpreter/";
+		var QURL = "https://ligfietser.dev.openstreetmap.org/BTM/api/interpreter/";
 		}
 		else{
 			var QURL = "https://overpass-api.de/api/interpreter/"; //default
@@ -88,7 +88,7 @@ function init(){
 			maxResolution: 156543.0399,
 			numZoomLevels: 19,
 			units: 'm',
-			projection: new OpenLayers.Projection("EPSG:900913"),
+			projection: new OpenLayers.Projection("EPSG:3857"),
 			displayProjection: new OpenLayers.Projection("EPSG:4326"),
 			theme: null // zie stylesheets
 		} );
@@ -100,13 +100,13 @@ function init(){
 		
 		var cycle = new OpenLayers.Layer.OSM("OpenCycleMap", ["https://a.tile.thunderforest.com/cycle/${z}/${x}/${y}.png?apikey=a5dd6a2f1c934394bce6b0fb077203eb", "https://b.tile.thunderforest.com/cycle/${z}/${x}/${y}.png?apikey=a5dd6a2f1c934394bce6b0fb077203eb", "https://c.tile.thunderforest.com/cycle/${z}/${x}/${y}.png?apikey=a5dd6a2f1c934394bce6b0fb077203eb"], { displayOutsideMaxExtent: true,numZoomLevels: 19, attribution: 'Open Cyclemap '}); map.addLayer(cycle);
 
-		var arcgis = new OpenLayers.Layer.XYZ("ArcGIS World Topo","https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/${z}/${y}/${x}",{'attribution': 'Cartography © <a href="http://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer" target="_blank">ArcGIS</a><br>Overlay data OpenStreetMap contributors, licensed under ODbL '}); 
+		var arcgis = new OpenLayers.Layer.XYZ("ArcGIS World Topo","https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/${z}/${y}/${x}",{'attribution': 'Cartography © <a href="https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer" target="_blank">ArcGIS</a><br>Overlay data OpenStreetMap contributors, licensed under ODbL '}); 
 		map.addLayer(arcgis);
 
-		var positron = new OpenLayers.Layer.XYZ("Positron (CartoDB)","https://s.basemaps.cartocdn.com/light_all/${z}/${x}/${y}.png",{'attribution': '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="https://cartodb.com/attributions">CartoDB</a>'});
+		var positron = new OpenLayers.Layer.XYZ("Positron (CartoDB)","https://s.basemaps.cartocdn.com/light_all/${z}/${x}/${y}.png",{'attribution': '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="https://cartodb.com/attributions">CartoDB</a>'});
 		map.addLayer(positron);
 		
-		var darkmatter = new OpenLayers.Layer.XYZ("Dark Matter (CartoDB)","https://s.basemaps.cartocdn.com/dark_all/${z}/${x}/${y}.png",{'attribution': '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="https://cartodb.com/attributions">CartoDB</a>'});
+		var darkmatter = new OpenLayers.Layer.XYZ("Dark Matter (CartoDB)","https://s.basemaps.cartocdn.com/dark_all/${z}/${x}/${y}.png",{'attribution': '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="https://cartodb.com/attributions">CartoDB</a>'});
 		map.addLayer(darkmatter);
 		
 		googlesat = new OpenLayers.Layer.XYZ("Google Sat",
