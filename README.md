@@ -2,7 +2,6 @@
 Here you can find the source code of the [BTM (bicycle tags map)](https://ligfietser.dev.openstreetmap.org/BTM/) rendering OSM bicycle related tags that are not rendered on OSM’s 'Mapnik' or cyclemap version. The map is developed by Noordfiets, PeeWee32 and ligfietser.
 
 ## Website URL
-
 The main URL for the Bicycle Tags Map is https://ligfietser.dev.openstreetmap.org/BTM
 
 ## Wiki
