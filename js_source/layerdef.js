@@ -301,7 +301,7 @@ function popuplinks(lonlat){
 	  thelink = thelink + "<a href=\"https://www.bing.com/maps/?v=2&cp=" + lonlat.lat + "~" + lonlat.lon + "&lvl=17&dir=0&sty=h&form=LMLTCC\" target=\"_blank\"><img src='img/bing.gif'>Bing</a><p>";
 	  thelink = thelink + "<a href=\"https://www.mapillary.com/app/?focus=map&pKey=bbox&lat="  + (lonlat.lat) + "&lng=" + (lonlat.lon ) + "&z=15"  + "\" target=\"_blank\"><img src='img/mapillary.png'>Mapillary</a><hr>";
 	  thelink = thelink + "<a href=\"https://cycling.waymarkedtrails.org/nl/?zoom=13" +  "&lat=" + lonlat.lat + "&lon=" + lonlat.lon + "\" target=\"_blank\"><img src='img/lonvia.gif'>Waymarked trails</a><hr>";
-	  var area = 0.01
+	  var area = 0.002
 	  var ctop = lonlat.lat + area;
 	  var cbottom = ctop - (2 * area);
 	  var cleft = lonlat.lon - area;
