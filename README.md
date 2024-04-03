@@ -11,8 +11,4 @@ https://wiki.openstreetmap.org/wiki/Bicycle_tags_map
 ## Forum
 For questions, suggestions etc use this topic on the Dutch OSM forum:
 https://community.openstreetmap.org/t/webkaartje-met-fietstags/61689
-<<<<<<< HEAD
 
-
-=======
->>>>>>> origin/master
